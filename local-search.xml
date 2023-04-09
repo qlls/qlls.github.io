@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search>
+  
+  
+  
+  <entry>
+    <title>Hello World</title>
+    <link href="/2023/04/09/hello-world/"/>
+    <url>/2023/04/09/hello-world/</url>
+    
+    <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p><h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">$ hexo new <span class="hljs-string">&quot;My New Post&quot;</span><br></code></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p><h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">$ hexo server<br></code></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p><h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">$ hexo generate<br></code></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p><h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">$ hexo deploy<br></code></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>]]></content>
+    
+    
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>test ttt</title>
+    <link href="/2022/04/09/test-ttt/"/>
+    <url>/2022/04/09/test-ttt/</url>
+    
+    <content type="html"><![CDATA[<h1 id="后量子密码学-课程论文"><a href="#后量子密码学-课程论文" class="headerlink" title="后量子密码学 课程论文"></a>后量子密码学 课程论文</h1><p>先收集文献</p><p>sis</p><p>lwe</p><p>rlwe</p><p>Gentry</p><p>BFV BGV</p><p>GSW</p><p>CKKS</p><p>基于 sis 和 lwe 的同态加密算法</p><p>部分同态  全同态</p><p>BFV BGV </p><p>效率比较 调库测试</p><p>全同态加密（Fully Homomorphic Encryption，FHE）算法能够将对密文的运算直接转化为对明文的运算，最早由 Rivest 等人提出利用同态加密来保护数据私密性的想法。利用同态加密，可以从根本上解决用户数据在第三的保密问题，目前已经在云计算等领域有广泛的应用。</p><p>在同态加密算法中，影响较大的有 GM（Goldwasser-Micali） 加密，ElGamal 加密，NTRU 加密和 Paillier 加密等。但这些算法都只具备乘法或者加法同态的性质，并且仅支持有限次的同态计算，称为部分同态加密（Some What Homomorphic Encryption）。</p><p>Gentry 等人于 2009 年提出基于理想格（Ideal Lattice）上的有界编码问题（Bounded Distance Decoding Problem，BDDP）与稀疏子集和问题（Sparse Subset Sum Problem，SSSP）的 FHE 方案。该方案首次实现了全同态加密，并可以对密文进行任意次数的同态加法和乘法运算。但遗憾的是，第一代同态加密方案私钥尺寸较大，效率较低，且只能达到选择明文攻击（CPA）安全。</p><p>为了使 FHE 方案不再依赖于 SSSP 假设，Brakerski 等人于 2011 年提出了基于 LWE 假设的 BFV 方案，方案的安全性依赖于任意格上的最坏情况下的短向量问题（Short Vector Problem，SVP）的困难性。而 Brakerski 等人于 2012 年再次提出 BGV 方案，利用 MS（Modulus Switching）技术有效控制了同态运算带来的密文噪声增加。Cheon 等人于2017 年基于 BGV 方案实现了 CKKS 方案，该方案利用 SIMD 编码复数向量到整型多项式，进而套用 BFV 与 BGV 方案，所以可以支持浮点数的 FHE 运算。这三种方案被视为第二代同态加密方案。</p><p>2013 年，Gentry 等人提出使用近似特征向量的方法构建的第三代同态加密方案（GSW 方案）。该方案仅仅需要做矩阵的乘法和加法就可以对密文进行任意次的同态加法和乘法运算，同时无序密钥转换和模数转换。基于该方案可以构造基于身份和基于属性的同态加密方案。到目前为止，尽管已经有很多针对该方案的效率优化工作提出，但公钥尺寸过大的问题仍未得到非常有效的解决。</p><blockquote><p>测试</p><p>csvzs</p></blockquote><p><code>vsdvs</code> as</p><p>ds<strong>evse</strong>d es 5<u>6 41</u></p>]]></content>
+    
+    
+    <categories>
+      
+      <category>hw</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>后量子</tag>
+      
+      <tag>格</tag>
+      
+      <tag>FHE</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  
+</search>
