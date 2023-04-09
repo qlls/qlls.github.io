@@ -16,17 +16,24 @@
   <meta name="author" content="qls">
   <meta name="keywords" content="">
   
-    <meta property="og:type" content="website">
-<meta property="og:title" content="归档">
-<meta property="og:url" content="http://example.com/archives/index.html">
+    <meta name="description" content="后量子密码学 课程论文先收集文献 sis lwe rlwe Gentry BFV BGV GSW CKKS 基于 sis 和 lwe 的同态加密算法 部分同态  全同态 BFV BGV  效率比较 调库测试 全同态加密（Fully Homomorphic Encryption，FHE）算法能够将对密文的运算直接转化为对明文的运算，最早由 Rivest 等人提出利用同态加密来保护数据私密性的想法。利">
+<meta property="og:type" content="website">
+<meta property="og:title" content="test ttt">
+<meta property="og:url" content="http://example.com/ttt/test-ttt.html">
 <meta property="og:site_name" content="qlllllllllllllls‘s blog">
+<meta property="og:description" content="后量子密码学 课程论文先收集文献 sis lwe rlwe Gentry BFV BGV GSW CKKS 基于 sis 和 lwe 的同态加密算法 部分同态  全同态 BFV BGV  效率比较 调库测试 全同态加密（Fully Homomorphic Encryption，FHE）算法能够将对密文的运算直接转化为对明文的运算，最早由 Rivest 等人提出利用同态加密来保护数据私密性的想法。利">
 <meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2022-04-09T05:52:19.000Z">
+<meta property="article:modified_time" content="2023-04-09T06:04:18.671Z">
 <meta property="article:author" content="qls">
+<meta property="article:tag" content="后量子">
+<meta property="article:tag" content="格">
+<meta property="article:tag" content="FHE">
 <meta name="twitter:card" content="summary_large_image">
   
   
   
-  <title>归档 - qlllllllllllllls‘s blog</title>
+  <title>test ttt - qlllllllllllllls‘s blog</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -186,7 +193,7 @@
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle" data-typed-text="归档"></span>
+            <span id="subtitle" data-typed-text="test ttt"></span>
           
         </div>
 
@@ -213,23 +220,35 @@
               <div class="col-12 col-md-10 m-auto">
                 
 
-<div class="list-group">
-  <p class="h4">共计 1 篇文章</p>
-  <hr>
-  
-  
-    
-      
-      <p class="h5">2023</p>
-    
-    <a href="/2023/04/09/%E5%9D%9A%E6%8C%81%E4%BA%BA%E6%B0%91%E8%87%B3%E4%B8%8A/" class="list-group-item list-group-item-action">
-      <time>04-09</time>
-      <div class="list-group-item-title">坚持人民至上--材料整合</div>
-    </a>
-  
-</div>
+<article class="page-content">
+  <h1 id="后量子密码学-课程论文"><a href="#后量子密码学-课程论文" class="headerlink" title="后量子密码学 课程论文"></a>后量子密码学 课程论文</h1><p>先收集文献</p>
+<p>sis</p>
+<p>lwe</p>
+<p>rlwe</p>
+<p>Gentry</p>
+<p>BFV BGV</p>
+<p>GSW</p>
+<p>CKKS</p>
+<p>基于 sis 和 lwe 的同态加密算法</p>
+<p>部分同态  全同态</p>
+<p>BFV BGV </p>
+<p>效率比较 调库测试</p>
+<p>全同态加密（Fully Homomorphic Encryption，FHE）算法能够将对密文的运算直接转化为对明文的运算，最早由 Rivest 等人提出利用同态加密来保护数据私密性的想法。利用同态加密，可以从根本上解决用户数据在第三的保密问题，目前已经在云计算等领域有广泛的应用。</p>
+<p>在同态加密算法中，影响较大的有 GM（Goldwasser-Micali） 加密，ElGamal 加密，NTRU 加密和 Paillier 加密等。但这些算法都只具备乘法或者加法同态的性质，并且仅支持有限次的同态计算，称为部分同态加密（Some What Homomorphic Encryption）。</p>
+<p>Gentry 等人于 2009 年提出基于理想格（Ideal Lattice）上的有界编码问题（Bounded Distance Decoding Problem，BDDP）与稀疏子集和问题（Sparse Subset Sum Problem，SSSP）的 FHE 方案。该方案首次实现了全同态加密，并可以对密文进行任意次数的同态加法和乘法运算。但遗憾的是，第一代同态加密方案私钥尺寸较大，效率较低，且只能达到选择明文攻击（CPA）安全。</p>
+<p>为了使 FHE 方案不再依赖于 SSSP 假设，Brakerski 等人于 2011 年提出了基于 LWE 假设的 BFV 方案，方案的安全性依赖于任意格上的最坏情况下的短向量问题（Short Vector Problem，SVP）的困难性。而 Brakerski 等人于 2012 年再次提出 BGV 方案，利用 MS（Modulus Switching）技术有效控制了同态运算带来的密文噪声增加。Cheon 等人于2017 年基于 BGV 方案实现了 CKKS 方案，该方案利用 SIMD 编码复数向量到整型多项式，进而套用 BFV 与 BGV 方案，所以可以支持浮点数的 FHE 运算。这三种方案被视为第二代同态加密方案。</p>
+<p>2013 年，Gentry 等人提出使用近似特征向量的方法构建的第三代同态加密方案（GSW 方案）。该方案仅仅需要做矩阵的乘法和加法就可以对密文进行任意次的同态加法和乘法运算，同时无序密钥转换和模数转换。基于该方案可以构造基于身份和基于属性的同态加密方案。到目前为止，尽管已经有很多针对该方案的效率优化工作提出，但公钥尺寸过大的问题仍未得到非常有效的解决。</p>
+<blockquote>
+<p>测试</p>
+<p>csvzs</p>
+</blockquote>
+<p><code>vsdvs</code> as</p>
+<p>ds<strong>evse</strong>d es 5<u>6 41</u></p>
 
 
+  
+
+</article>
 
 
 
